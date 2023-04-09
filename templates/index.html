@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Car Check</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <h1>Car Check</h1>
+      <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="number">Number:</label>
+          <input type="text" class="form-control" id="number" name="number" placeholder="Enter car number">
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+      {% if car %}
+        <p>Number: {{ car.number }}</p>
+        <p>Number: {{ car.number }}</p>
+        
+
+        <p>Brand: {{ car.brand }}</p>
+        <p>Model: {{ car.model }}</p>
+      {% else %}
+        <p>No data for number {{ number }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>
