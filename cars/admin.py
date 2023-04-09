@@ -1,6 +1,4 @@
-from django.apps import AppConfig
-
-
-class CarsConfig(AppConfig):
-    default_auto_field = 'django.db.models.BigAutoField'
-    name = 'cars'
+from django.contrib import admin
+from .models import Car 
+# Register your models here.
+admin.site.register(Car)
