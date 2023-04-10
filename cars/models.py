@@ -11,6 +11,11 @@ class Car(models.Model):
         verbose_name="Производство"
 
         )
+    brand = models.CharField(
+        max_length=30,
+        verbose_name= "Бренд"
+        
+    )
     model = models.CharField(
         max_length=50,
         verbose_name="Модель"
